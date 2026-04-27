@@ -1,0 +1,41 @@
+{
+  "properties" : {
+    "localizable" : true
+  },
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "colors" : [
+    {
+      "idiom" : "tv",
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "red" : "0.842",
+          "alpha" : "1.000",
+          "blue" : "0.149",
+          "green" : "0.173"
+        }
+      }
+    },
+    {
+      "idiom" : "tv",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "red" : "0.706",
+          "alpha" : "1.000",
+          "blue" : "0.149",
+          "green" : "0.173"
+        }
+      }
+    }
+  ]
+}

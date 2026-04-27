@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23788.4" systemVersion="24F74" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Carousal" representedClassName="Carousal" syncable="YES">
+        <attribute name="endTime" optional="YES" attributeType="String"/>
+        <attribute name="startTime" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="CarousalImages" representedClassName="CarousalImages" syncable="YES">
+        <attribute name="audioPath" optional="YES" attributeType="String"/>
+        <attribute name="carousalImage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="carouselType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="imageName" optional="YES" attributeType="String"/>
+        <attribute name="slotTime" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Clock" representedClassName="Clock" syncable="YES">
+        <attribute name="endTime" optional="YES" attributeType="String"/>
+        <attribute name="message" optional="YES" attributeType="String"/>
+        <attribute name="startTime" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="statusFlag" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="CustomHomePage" representedClassName="CustomHomePage" syncable="YES">
+        <attribute name="catieTvFontColor" optional="YES" attributeType="String"/>
+        <attribute name="catieTvFontSize" optional="YES" attributeType="String"/>
+        <attribute name="catieTvFontType" optional="YES" attributeType="String"/>
+        <attribute name="catieTvType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="tvRadioFlag" optional="YES" attributeType="Integer 16" defaultValueString="1" usesScalarValueType="YES"/>
+        <attribute name="tvStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="DetailedWeather" representedClassName="DetailedWeather" syncable="YES">
+        <attribute name="currentDayHigh" optional="YES" attributeType="String"/>
+        <attribute name="currentDayLow" optional="YES" attributeType="String"/>
+        <attribute name="feelsLike" optional="YES" attributeType="String"/>
+        <attribute name="humidity" optional="YES" attributeType="String"/>
+        <attribute name="pressure" optional="YES" attributeType="String"/>
+        <attribute name="sunRise" optional="YES" attributeType="String"/>
+        <attribute name="sunSet" optional="YES" attributeType="String"/>
+        <attribute name="visibilty" optional="YES" attributeType="String"/>
+        <attribute name="wind" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Event" representedClassName="Event" syncable="YES">
+        <attribute name="multiCalendar" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="titleName" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="EventList" representedClassName="EventList" syncable="YES">
+        <attribute name="calendarName" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="endTime" optional="YES" attributeType="String"/>
+        <attribute name="eventDescription" optional="YES" attributeType="String"/>
+        <attribute name="eventName" optional="YES" attributeType="String"/>
+        <attribute name="startTime" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ForeCastWeather" representedClassName="ForeCastWeather" syncable="YES">
+        <attribute name="day" optional="YES" attributeType="String"/>
+        <attribute name="des" optional="YES" attributeType="String"/>
+        <attribute name="high" optional="YES" attributeType="String"/>
+        <attribute name="low" optional="YES" attributeType="String"/>
+        <attribute name="weatherIcons" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+    </entity>
+    <entity name="Radio" representedClassName="Radio" syncable="YES">
+        <attribute name="playingStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="radioFeed" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="SaraAlert" representedClassName="SaraAlert" syncable="YES">
+        <attribute name="audio" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="backgroundColor" optional="YES" attributeType="String"/>
+        <attribute name="border" optional="YES" attributeType="String"/>
+        <attribute name="borderColor" optional="YES" attributeType="String"/>
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="flash" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="flashColor" optional="YES" attributeType="String"/>
+        <attribute name="fontSize" optional="YES" attributeType="String"/>
+        <attribute name="fontStyle" optional="YES" attributeType="String"/>
+        <attribute name="fontWeight" optional="YES" attributeType="String"/>
+        <attribute name="height" optional="YES" attributeType="String"/>
+        <attribute name="margin" optional="YES" attributeType="String"/>
+        <attribute name="textAlign" optional="YES" attributeType="String"/>
+        <attribute name="width" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="SaraBody" representedClassName="SaraBody" syncable="YES">
+        <attribute name="backgroundColor" optional="YES" attributeType="String"/>
+        <attribute name="border" optional="YES" attributeType="String"/>
+        <attribute name="borderColor" optional="YES" attributeType="String"/>
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="fontSize" optional="YES" attributeType="String"/>
+        <attribute name="fontStyle" optional="YES" attributeType="String"/>
+        <attribute name="fontWeight" optional="YES" attributeType="String"/>
+        <attribute name="height" optional="YES" attributeType="String"/>
+        <attribute name="margin" optional="YES" attributeType="String"/>
+        <attribute name="textAlign" optional="YES" attributeType="String"/>
+        <attribute name="width" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="SaraBodyIndividual" representedClassName="SaraBodyIndividual" syncable="YES">
+        <attribute name="backgroundColor" optional="YES" attributeType="String"/>
+        <attribute name="bodyText" optional="YES" attributeType="String"/>
+        <attribute name="border" optional="YES" attributeType="String"/>
+        <attribute name="borderColor" optional="YES" attributeType="String"/>
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="fontSize" optional="YES" attributeType="String"/>
+        <attribute name="fontStyle" optional="YES" attributeType="String"/>
+        <attribute name="fontWeight" optional="YES" attributeType="String"/>
+        <attribute name="height" optional="YES" attributeType="String"/>
+        <attribute name="margin" optional="YES" attributeType="String"/>
+        <attribute name="textAlign" optional="YES" attributeType="String"/>
+        <attribute name="width" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="SaraBodyText" representedClassName="SaraBodyText" syncable="YES">
+        <attribute name="backgroundColor" optional="YES" attributeType="String"/>
+        <attribute name="border" optional="YES" attributeType="String"/>
+        <attribute name="borderColor" optional="YES" attributeType="String"/>
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="fontSize" optional="YES" attributeType="String"/>
+        <attribute name="fontStyle" optional="YES" attributeType="String"/>
+        <attribute name="fontWeight" optional="YES" attributeType="String"/>
+        <attribute name="height" optional="YES" attributeType="String"/>
+        <attribute name="margin" optional="YES" attributeType="String"/>
+        <attribute name="pointers" optional="YES" attributeType="String"/>
+        <attribute name="textAlign" optional="YES" attributeType="String"/>
+        <attribute name="width" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="SaraFooter" representedClassName="SaraFooter" syncable="YES">
+        <attribute name="backgroundColor" optional="YES" attributeType="String"/>
+        <attribute name="border" optional="YES" attributeType="String"/>
+        <attribute name="borderColor" optional="YES" attributeType="String"/>
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="fontSize" optional="YES" attributeType="String"/>
+        <attribute name="fontStyle" optional="YES" attributeType="String"/>
+        <attribute name="fontWeight" optional="YES" attributeType="String"/>
+        <attribute name="footerText" optional="YES" attributeType="String"/>
+        <attribute name="height" optional="YES" attributeType="String"/>
+        <attribute name="margin" optional="YES" attributeType="String"/>
+        <attribute name="textAlign" optional="YES" attributeType="String"/>
+        <attribute name="width" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="SaraHeader" representedClassName="SaraHeader" syncable="YES">
+        <attribute name="backgroundColor" optional="YES" attributeType="String"/>
+        <attribute name="border" optional="YES" attributeType="String"/>
+        <attribute name="borderColor" optional="YES" attributeType="String"/>
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="fontSize" optional="YES" attributeType="String"/>
+        <attribute name="fontStyle" optional="YES" attributeType="String"/>
+        <attribute name="fontWeight" optional="YES" attributeType="String"/>
+        <attribute name="headerText" optional="YES" attributeType="String"/>
+        <attribute name="height" optional="YES" attributeType="String"/>
+        <attribute name="margin" optional="YES" attributeType="String"/>
+        <attribute name="textAlign" optional="YES" attributeType="String"/>
+        <attribute name="width" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ScrollMessage" representedClassName="ScrollMessage" syncable="YES">
+        <attribute name="messageDescription" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="SiteLogo" representedClassName="SiteLogo" syncable="YES">
+        <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="imageName" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="StatusIndicator" representedClassName="StatusIndicator" syncable="YES">
+        <attribute name="message" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="statusFlag" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="statusName" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Weather" representedClassName="Weather" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="temperature" optional="YES" attributeType="String"/>
+        <attribute name="temperatureText" optional="YES" attributeType="String"/>
+        <attribute name="weatherIcon" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="webSource" optional="YES" attributeType="String"/>
+    </entity>
+</model>

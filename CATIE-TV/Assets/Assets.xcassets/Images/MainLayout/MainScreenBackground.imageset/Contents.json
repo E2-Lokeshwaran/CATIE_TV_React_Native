@@ -1,0 +1,40 @@
+{
+  "images" : [
+    {
+      "filename" : "background-light.jpg",
+      "idiom" : "tv",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "background-dark.jpg",
+      "idiom" : "tv",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "background-light@2x.jpg",
+      "idiom" : "tv",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "background-dark@2x.jpg",
+      "idiom" : "tv",
+      "scale" : "2x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

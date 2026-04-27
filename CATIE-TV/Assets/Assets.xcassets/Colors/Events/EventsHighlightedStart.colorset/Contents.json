@@ -1,0 +1,38 @@
+{
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "colors" : [
+    {
+      "idiom" : "tv",
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "red" : "0.664",
+          "alpha" : "0.800",
+          "blue" : "0.149",
+          "green" : "0.174"
+        }
+      }
+    },
+    {
+      "idiom" : "tv",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "red" : "0.707",
+          "alpha" : "1.000",
+          "blue" : "0.149",
+          "green" : "0.174"
+        }
+      }
+    }
+  ]
+}

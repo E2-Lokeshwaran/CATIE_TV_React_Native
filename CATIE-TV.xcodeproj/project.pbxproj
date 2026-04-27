@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 90;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		680E3BA62DD1F1F0003034AC /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 680E3BA52DD1F1F0003034AC /* CocoaLumberjack */; };
+		680E3BA82DD1F1F0003034AC /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 680E3BA72DD1F1F0003034AC /* CocoaLumberjackSwift */; };
+		680E3BAB2DD1F203003034AC /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 680E3BAA2DD1F203003034AC /* Starscream */; };
+		680E3BB52DD1F8FB003034AC /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 680E3BB42DD1F8FB003034AC /* CocoaLumberjack */; };
+		680E3BB72DD1F8FB003034AC /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 680E3BB62DD1F8FB003034AC /* CocoaLumberjackSwift */; };
+		680E3BB92DD1F904003034AC /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 680E3BB82DD1F904003034AC /* Starscream */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84CA1141227027A700F4FBB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84CA11192270279D00F4FBB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84CA11202270279D00F4FBB6;
+			remoteInfo = "CATIE-TV";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		84CA11212270279D00F4FBB6 /* CATIE-TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CATIE-TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84CA1140227027A700F4FBB6 /* CATIE-TVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CATIE-TVUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		68FBA50E2DD37F94000F1296 /* Exceptions for "CATIE-TV" folder in "CATIE-TV" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 84CA11202270279D00F4FBB6 /* CATIE-TV */;
+		};
+		68FBA50F2DD37F94000F1296 /* Exceptions for "CATIE-TVUITests" folder in "CATIE-TVUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 84CA113F227027A700F4FBB6 /* CATIE-TVUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		68FBA4392DD37F93000F1296 /* CATIE-TVUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				68FBA50F2DD37F94000F1296 /* Exceptions for "CATIE-TVUITests" folder in "CATIE-TVUITests" target */,
+			);
+			path = "CATIE-TVUITests";
+			sourceTree = "<group>";
+		};
+		68FBA4AC2DD37F94000F1296 /* CATIE-TV */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				68FBA50E2DD37F94000F1296 /* Exceptions for "CATIE-TV" folder in "CATIE-TV" target */,
+			);
+			path = "CATIE-TV";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84CA111E2270279D00F4FBB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				680E3BA62DD1F1F0003034AC /* CocoaLumberjack in Frameworks */,
+				680E3BA82DD1F1F0003034AC /* CocoaLumberjackSwift in Frameworks */,
+				680E3BAB2DD1F203003034AC /* Starscream in Frameworks */,
+			);
+		};
+		84CA113D227027A700F4FBB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				680E3BB72DD1F8FB003034AC /* CocoaLumberjackSwift in Frameworks */,
+				680E3BB52DD1F8FB003034AC /* CocoaLumberjack in Frameworks */,
+				680E3BB92DD1F904003034AC /* Starscream in Frameworks */,
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84CA11182270279D00F4FBB6 = {
+			isa = PBXGroup;
+			children = (
+				68FBA4AC2DD37F94000F1296 /* CATIE-TV */,
+				68FBA4392DD37F93000F1296 /* CATIE-TVUITests */,
+				84CA11222270279D00F4FBB6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84CA11222270279D00F4FBB6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84CA11212270279D00F4FBB6 /* CATIE-TV.app */,
+				84CA1140227027A700F4FBB6 /* CATIE-TVUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84CA11202270279D00F4FBB6 /* CATIE-TV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84CA1149227027A700F4FBB6 /* Build configuration list for PBXNativeTarget "CATIE-TV" */;
+			buildPhases = (
+				84CA111D2270279D00F4FBB6 /* Sources */,
+				84CA111E2270279D00F4FBB6 /* Frameworks */,
+				84CA111F2270279D00F4FBB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				68FBA4AC2DD37F94000F1296 /* CATIE-TV */,
+			);
+			name = "CATIE-TV";
+			productName = "CATIE-TV";
+			productReference = 84CA11212270279D00F4FBB6 /* CATIE-TV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84CA113F227027A700F4FBB6 /* CATIE-TVUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84CA114F227027A700F4FBB6 /* Build configuration list for PBXNativeTarget "CATIE-TVUITests" */;
+			buildPhases = (
+				84CA113C227027A700F4FBB6 /* Sources */,
+				84CA113D227027A700F4FBB6 /* Frameworks */,
+				84CA113E227027A700F4FBB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84CA1142227027A700F4FBB6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				68FBA4392DD37F93000F1296 /* CATIE-TVUITests */,
+			);
+			name = "CATIE-TVUITests";
+			productName = "CATIE-TVUITests";
+			productReference = 84CA1140227027A700F4FBB6 /* CATIE-TVUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84CA11192270279D00F4FBB6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1630;
+				ORGANIZATIONNAME = statusSolutions;
+				TargetAttributes = {
+					84CA11202270279D00F4FBB6 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1340;
+					};
+					84CA113F227027A700F4FBB6 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
+						TestTargetID = 84CA11202270279D00F4FBB6;
+					};
+				};
+			};
+			buildConfigurationList = 84CA111C2270279D00F4FBB6 /* Build configuration list for PBXProject "CATIE-TV" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84CA11182270279D00F4FBB6;
+			packageReferences = (
+				680E3BAC2DD1F5EB003034AC /* XCRemoteSwiftPackageReference "Starscream" */,
+				680E3BAF2DD1F60B003034AC /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
+			);
+			preferredProjectObjectVersion = 90;
+			productRefGroup = 84CA11222270279D00F4FBB6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84CA11202270279D00F4FBB6 /* CATIE-TV */,
+				84CA113F227027A700F4FBB6 /* CATIE-TVUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84CA111F2270279D00F4FBB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		84CA113E227027A700F4FBB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84CA111D2270279D00F4FBB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		84CA113C227027A700F4FBB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84CA1142227027A700F4FBB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84CA11202270279D00F4FBB6 /* CATIE-TV */;
+			targetProxy = 84CA1141227027A700F4FBB6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		84CA1147227027A700F4FBB6 /* Debug configuration for PBXProject "CATIE-TV" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 8942H9Y37B;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 15.0;
+			};
+			name = Debug;
+		};
+		84CA1148227027A700F4FBB6 /* Release configuration for PBXProject "CATIE-TV" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 8942H9Y37B;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TVOS_DEPLOYMENT_TARGET = 15.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84CA114A227027A700F4FBB6 /* Debug configuration for PBXNativeTarget "CATIE-TV" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHSCREEN_NAME = LaunchScreen;
+				CLANG_ANALYZER_GCD_PERFORMANCE = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DEVELOPMENT_TEAM = 8942H9Y37B;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				INFOPLIST_FILE = "CATIE-TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 26.04.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.statussolutions.catietv;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CATIE-TV/Presenter/Utils/CATIE-TV-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
+				_EXPERIMENTAL_SWIFT_EXPLICIT_MODULES = YES;
+			};
+			name = Debug;
+		};
+		84CA114B227027A700F4FBB6 /* Release configuration for PBXNativeTarget "CATIE-TV" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHSCREEN_NAME = LaunchScreen;
+				CLANG_ANALYZER_GCD_PERFORMANCE = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DEVELOPMENT_TEAM = 8942H9Y37B;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				INFOPLIST_FILE = "CATIE-TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 26.04.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.statussolutions.catietv;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CATIE-TV/Presenter/Utils/CATIE-TV-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
+				_EXPERIMENTAL_SWIFT_EXPLICIT_MODULES = YES;
+			};
+			name = Release;
+		};
+		84CA1150227027A700F4FBB6 /* Debug configuration for PBXNativeTarget "CATIE-TVUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CATIE-TVUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.statusSolutions.CATIE-TVUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = "CATIE-TV";
+				TVOS_DEPLOYMENT_TARGET = 15.0;
+			};
+			name = Debug;
+		};
+		84CA1151227027A700F4FBB6 /* Release configuration for PBXNativeTarget "CATIE-TVUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CATIE-TVUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.statusSolutions.CATIE-TVUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = "CATIE-TV";
+				TVOS_DEPLOYMENT_TARGET = 15.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84CA111C2270279D00F4FBB6 /* Build configuration list for PBXProject "CATIE-TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84CA1147227027A700F4FBB6 /* Debug configuration for PBXProject "CATIE-TV" */,
+				84CA1148227027A700F4FBB6 /* Release configuration for PBXProject "CATIE-TV" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		84CA1149227027A700F4FBB6 /* Build configuration list for PBXNativeTarget "CATIE-TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84CA114A227027A700F4FBB6 /* Debug configuration for PBXNativeTarget "CATIE-TV" */,
+				84CA114B227027A700F4FBB6 /* Release configuration for PBXNativeTarget "CATIE-TV" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		84CA114F227027A700F4FBB6 /* Build configuration list for PBXNativeTarget "CATIE-TVUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84CA1150227027A700F4FBB6 /* Debug configuration for PBXNativeTarget "CATIE-TVUITests" */,
+				84CA1151227027A700F4FBB6 /* Release configuration for PBXNativeTarget "CATIE-TVUITests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		680E3BA42DD1F1F0003034AC /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack.git";
+			requirement = {
+				kind = exactVersion;
+				version = 3.8.5;
+			};
+		};
+		680E3BA92DD1F203003034AC /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream.git";
+			requirement = {
+				kind = exactVersion;
+				version = 3.1.1;
+			};
+		};
+		680E3BAC2DD1F5EB003034AC /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream.git";
+			requirement = {
+				kind = exactVersion;
+				version = 4.0.8;
+			};
+		};
+		680E3BAF2DD1F60B003034AC /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack.git";
+			requirement = {
+				kind = exactVersion;
+				version = 3.8.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		680E3BA52DD1F1F0003034AC /* CocoaLumberjack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 680E3BA42DD1F1F0003034AC /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjack;
+		};
+		680E3BA72DD1F1F0003034AC /* CocoaLumberjackSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 680E3BA42DD1F1F0003034AC /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwift;
+		};
+		680E3BAA2DD1F203003034AC /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 680E3BA92DD1F203003034AC /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+		680E3BB42DD1F8FB003034AC /* CocoaLumberjack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 680E3BAF2DD1F60B003034AC /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjack;
+		};
+		680E3BB62DD1F8FB003034AC /* CocoaLumberjackSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 680E3BAF2DD1F60B003034AC /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwift;
+		};
+		680E3BB82DD1F904003034AC /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 680E3BAC2DD1F5EB003034AC /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 84CA11192270279D00F4FBB6 /* Project object */;
+}

@@ -1,0 +1,202 @@
+default_platform(:ios)
+
+platform :ios do
+  before_all do
+    app_store_connect_api_key(
+      key_id: "8S8J8UPYB7",
+      issuer_id: "69a6de7f-0bf5-47e3-e053-5b8c7c11a4d1",
+      key_filepath: "fastlane/8S8J8UPYB7.p8"
+    )
+  end
+
+  desc "Build and upload to TestFlight Beta group"
+  lane :beta do
+    # Ensure code signing settings are correct
+    update_code_signing_settings(
+      use_automatic_signing: true,
+      path: "CATIE-TV.xcodeproj"
+    )
+    
+    app_details = get_app_details
+
+    # Build the tvOS application
+    build_app(
+      clean: true,
+      project: "CATIE-TV.xcodeproj",
+      scheme: "CATIE-TV",
+      export_method: "app-store",
+      xcargs: "-allowProvisioningUpdates"
+    )
+    
+    # Upload to TestFlight
+    upload_to_testflight(
+      changelog: "Beta build: #{app_details[:version_name]}. New features and bug fixes.",
+    )
+    
+    notify_teams(app_details, "Beta", "E2 QA")
+  end
+  
+  desc "Promote existing TestFlight build to Release Candidate testing group"
+  lane :'release-candidate' do
+    app_details = get_app_details
+    
+    app_identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
+    UI.user_error!("app_identifier not found in Appfile. Please configure your Appfile.") unless app_identifier
+
+    # Promote the build that matches version and build number from Info.plist
+    upload_to_testflight(
+      app_identifier: app_identifier,
+      app_version: app_details[:app_version],
+      build_number: app_details[:build_number],
+      groups: ["Status QA", "E2 External"], 
+      distribute_only: true, 
+      distribute_external: true,
+      notify_external_testers: true,
+      changelog: "Release Candidate: #{app_details[:version_name]}."
+    )
+    
+    notify_teams(app_details, "Release Candidate", "E2 QA, Status QA, E2 External")
+  end
+  
+  desc "Promote existing TestFlight build to Production (App Store Review)"
+  lane :production do
+    app_details = get_app_details
+
+    app_identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
+    UI.user_error!("app_identifier not found in Appfile. Please configure your Appfile.") unless app_identifier
+    
+    # Submit the build matching version/build_number for review
+    upload_to_app_store(
+      app_identifier: app_identifier,
+      app_version: app_details[:app_version], 
+      build_number: app_details[:build_number],
+      skip_binary_upload: true,
+      skip_metadata: true, 
+      skip_screenshots: true,
+      submit_for_review: true,
+      automatic_release: false,
+      changelog: "Bug fixes and improvements"
+    )
+    
+    notify_teams(app_details, "Production", "App Store Review")
+  end
+
+  # HELPER METHODS
+
+  def get_app_details()
+    xcodeproj_path = "CATIE-TV.xcodeproj"
+    target_name = "CATIE-TV"
+    
+    # Use get_version_number and get_build_number to get resolved values from Xcode project
+    version_number = get_version_number(xcodeproj: xcodeproj_path, target: target_name)
+    build_number = get_build_number(xcodeproj: xcodeproj_path)
+
+    UI.user_error!("Could not retrieve version number from #{xcodeproj_path}") if version_number.to_s.empty?
+    UI.user_error!("Could not retrieve build number from #{xcodeproj_path}") if build_number.to_s.empty?
+    
+    return {
+      app_version: version_number,
+      build_number: build_number,
+      version_name: "#{version_number} (#{build_number})"
+    }
+  end
+
+  def notify_teams(version_details, release_type, target_group)
+    teams_webhook_url = "https://default90842b4ba2c34a31b67d7d6951da4e.b1.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/5bb62d0cc8084f05826e303b2b1d045d/triggers/manual/paths/invoke/?api-version=1&tenantId=tId&environmentId=Default-90842b4b-a2c3-4a31-b67d-7d6951da4eb1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=X8vq4-4M_6Scr9J9QxpGr6q8pkdlj1uVpQjwvWq-eFM"
+    app_name = "CATIE-TV"
+    package_name = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
+    version_name_text = version_details[:version_name]
+    build_date = Time.now.getlocal("+05:30").strftime("%Y-%m-%d %H:%M:%S IST")
+
+    message_text = ""
+    badge_style = ""
+    if release_type == "Beta"
+      message_text = "✅ New tvOS build uploaded to TestFlight."
+      badge_style = "Attention"
+    elsif release_type == "Release Candidate"
+      message_text = "✅ tvOS build has been promoted to RC and pending review for E2 External."
+      badge_style = "Warning"
+    elsif release_type == "Production"
+      message_text = "✅ tvOS build has been promoted to Production and pending review."
+      badge_style = "Good"
+    else
+      # Fallback for any other types
+      message_text = "✅ tvOS build #{version_name_text} for #{app_name} (#{release_type}) has been processed for #{target_group}."
+      badge_style = "Attention"
+    end
+
+    # Get Git information (similar to what was in default_payloads)
+    git_branch = sh("git rev-parse --abbrev-ref HEAD").strip
+    last_commit = sh("git log -1 --pretty=%B").strip
+
+    teams_card(
+      workflow_url: teams_webhook_url,
+      custom_card: {
+        "type": "AdaptiveCard",
+        "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.5",
+        "body": [
+          {
+            "type": "Badge",
+            "text": release_type,
+            "shape": "Rounded",
+            "tooltip": "Release type",
+            "size": "Large",
+            "style": badge_style
+          },
+          {
+            "type": "TextBlock",
+            "size": "Large",
+            "weight": "Bolder",
+            "text": message_text,
+            "wrap": true
+          },
+          {
+            "type": "Image",
+            "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ef/c9/29/efc92920-0905-c679-8814-d5641ca1c7d4/App_Icon-marketing.lsr/1200x630bb.png",
+            "targetWidth": "Standard",
+            "size": "Large",
+            "style": "RoundedCorners"
+          },
+          {
+            "type": "FactSet",
+            "facts": [
+              {
+                "title": "Build Date",
+                "value": build_date
+              },
+              {
+                "title": "Version",
+                "value": version_name_text
+              },
+              {
+                "title": "Release Type",
+                "value": release_type
+              },
+              {
+                "title": "App Name",
+                "value": app_name
+              },
+              {
+                "title": "Package Name",
+                "value": package_name
+              },
+              {
+                "title": "Target Group",
+                "value": target_group
+              },
+              {
+                "title": "Branch",
+                "value": git_branch
+              },
+              {
+                "title": "Commit",
+                "value": last_commit
+              }
+            ]
+          }
+        ]
+      }
+    )
+  end
+end
